@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title #{category} Jokes
+  body
+    h1 #{category} Jokes
+    ul
+      each joke in jokes
+        li
+          h3 #{joke.setup}
+          p #{joke.delivery}
+    a(href="/jokebook/categories") Back to Categories
+    a(href="/") Home

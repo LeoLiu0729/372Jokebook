@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Random Joke
+  body
+    h1 Welcome to Jokebook!
+    if joke
+      h2 Random Joke
+      h3 #{joke.setup}
+      p #{joke.delivery}
+    else
+      p No jokes available.
+    a(href="/jokebook/categories") View Categories
+    a(href="/jokebook/add-joke") Add a New Joke

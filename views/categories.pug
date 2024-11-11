@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Joke Categories
+  body
+    h1 Categories
+    ul
+      each category in categories
+        li: a(href=`/jokebook/jokes/${category.name}`) #{category.name}
+    form(action="/jokebook/jokes/search" method="GET")
+      label(for="category") Search Category:
+      input(type="text" name="category" required)
+      button(type="submit") Search
+    a(href="/") Home
